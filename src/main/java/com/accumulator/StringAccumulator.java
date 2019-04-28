@@ -29,20 +29,20 @@ public class StringAccumulator {
     }
 
     private int sum(List<String> numList) {
-        int total=0;   //program asks to use int add(), int value may overflow if very large string is sent?
-        StringBuilder errorbuilder = new StringBuilder(ERROR_MESSAGE);
+        int total=0;   //program asks to use int add(), int value may overflow if very large string is sent
+        StringBuilder errorBuilder = new StringBuilder(ERROR_MESSAGE);
         boolean hasError = false;
         for(String value : numList){
             int num = Integer.parseInt(value);
             if (num <0){
                 hasError = true;
-                errorbuilder.append(" ").append(num);
+                errorBuilder.append(" ").append(num);
             }else if (num <= 1000){
                 total +=num;
             }
         }
         if (hasError){
-            throw new IllegalArgumentException(errorbuilder.toString());
+            throw new IllegalArgumentException(errorBuilder.toString());
         }
 
         return total;

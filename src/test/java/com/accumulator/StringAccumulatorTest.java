@@ -44,7 +44,7 @@ public class StringAccumulatorTest {
 
     @Test
     public void addNumbers_Support_MultiChar_Delim_In_Input() {
-        assertEquals(5,stringAccumulator.add("//;*;|;;;\n1;;;4"));
+        assertEquals(7,stringAccumulator.add("//;*;|;;;\n1;;;4;*;2"));
     }
 
     @Test
