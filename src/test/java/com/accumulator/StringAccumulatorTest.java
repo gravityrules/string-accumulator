@@ -22,6 +22,11 @@ public class StringAccumulatorTest {
     }
 
     @Test
+    public void addEmptyStrings(){
+        assertEquals(0,stringAccumulator.add(""));
+    }
+
+    @Test
     public void addTwoNumbers_CommaDelim() {
         assertEquals(5, stringAccumulator.add("1,4"));
     }
